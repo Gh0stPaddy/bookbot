@@ -1,8 +1,13 @@
-
+import sys
 from stats import get_num_words, letter_count, sorted_list
 
+list_length = len(sys.argv)
+if list_length != 2:
+    print(f"Usage: python3 main.py <path_to_book>")
+    sys.exit(1)
+else:
+    book_path = sys.argv[1]
 
-book_path = "books/frankenstein.txt"
 
 ## takes the file path as an input
 
